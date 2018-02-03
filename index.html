@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>JQuery</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+  </head>
+  <body>
+    <div id="wrapper">
+
+      <h1>Random Stuff</h1>
+
+      <img src="./img/random_logo.png" id="random">
+
+      <p id="p1">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur auctor arcu vitae interdum rutrum. Phasellus nec porta dui. Suspendisse et metus non nisl tincidunt ullamcorper. Pellentesque nec euismod dui. Morbi convallis mollis orci vitae sagittis. Etiam at sapien vel ligula facilisis cursus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Sed id lobortis nisl, sit amet tincidunt sapien. Curabitur lacus mauris, sollicitudin finibus lacus vitae, <em>condimentum semper risus</em>. Quisque viverra lorem et <a href="#">libero molestie congue</a> vel vel augue. Morbi aliquam elit ac risus tristique eleifend.
+      </p>
+
+      <p id="p2">
+        Morbi et sodales nisl, <em>eu dapibus lorem</em>. Mauris ornare elementum mi eu sagittis. <em>Sed mollis sem a massa</em> tempor, in hendrerit mauris auctor. Fusce vehicula viverra augue. Aliquam mattis augue a dui bibendum pulvinar. Curabitur nisl diam, lacinia vitae sem sed, dapibus accumsan risus. Donec laoreet rhoncus sem, non laoreet libero dignissim vitae. Praesent ac quam porta libero convallis venenatis.
+      </p>
+
+      <table id="tableData">
+        <caption>Baseball</caption>
+        <thead>
+          <tr>
+            <td colspan="4">Best Baseball Players</td>
+          </tr>
+        </thead>
+        <tfoot>
+          <tr><td colspan="4">* Hall of Fame</td></tr>
+        </tfoot>
+        <tbody>
+          <tr>
+            <td></td>
+            <td>Average</td>
+            <td>RBIs</td>
+            <td>Homeruns</td>
+          </tr>
+          <tr>
+            <td><a href="#">Hank Aaron*</a></td>
+            <td>.305</td>
+            <td>2297</td>
+            <td>755</td>
+          </tr>
+          <tr>
+            <td><a href="#">Babe Ruth*</a></td>
+            <td>.342</td>
+            <td>2214</td>
+            <td>714</td>
+          </tr>
+          <tr>
+            <td><a href="#">Barry Bonds</a></td>
+            <td>.298</td>
+            <td>1996</td>
+            <td>762</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h2 id="bestSelling">Best Selling Childrens Books</h2>
+
+      <ol id="bestSellingBooks">
+        <li>Harry Potter
+          <ol id="harryPotterBooks">
+            <li>and the Sorcerer's Stone</li>
+            <li>and the Half-Blood Prince</li>
+            <li>and the Chamber of Secrets</li>
+            <li>Prisoner of Azkaban</li>
+            <li name="best_book">and the Goblet of Fire</li>
+            <li>and the Order of the Phoenix</li>
+            <li>and the Deathly Hallows</li>
+          </ol>
+        </li>
+        <li>The Very Hungry Caterpillar</li>
+      </ol>
+
+      <script type="text/javascript">
+        $("document").ready(function() {
+          $("#wrapper").css("width", 500);
+          $("#wrapper").css("margin", "auto");
+          $("#random").css("float", "left");
+          $("#p1").css("color", "red");
+          $("#p2").css({
+            "background": "url('./img/repeatBackground.png') repeat-y"
+          });
+          $("#tableData a").css("color", "green");
+          <!-- Target a a tag following a em tag -->
+          $("em + e").css("color", "yellow");
+          <!-- Target every em tag inside the paragraphs -->
+          $("p > em").css("color", "grey");
+          $("#harryPotterBooks li:nth-child(3)").css("color", "orange");
+        }); <!-- End of JQuery Code -->
+      </script>
+    </div>
+  </body>
+</html>
